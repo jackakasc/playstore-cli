@@ -49,7 +49,7 @@ module.exports = class PlayApi {
       headers: {
         'content-type': 'application/javascript; charset=UTF-8',
         'x-gwt-module-base': 'https://ssl.gstatic.com/play-apps-publisher-rapid/fox/ba980c6cd1496164cc9e7033f487d0d3/fox/gwt/',
-        'x-gwt-permutation': 'EDE92F625EE357A11EE70312B2D4C2B4',
+        'x-gwt-permutation': '413A7D4E82C34B15C389925E1597995C',
         'cookie': this.cookies,
       },
     });

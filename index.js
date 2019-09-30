@@ -37,7 +37,7 @@ module.exports = class PlayApi {
 
     this.browser = config.browser
     this.page = config.page || await this.browser.newPage()
-    this.page.setDefaultTimeout(120000)
+    this.page.setDefaultTimeout(360000)
 
     !this.config.silent && console.log(this.tag, 'Logging In with', chalk.green(this.config.email))
     await this.login({ email: this.config.email, password: this.config.password })
@@ -48,8 +48,8 @@ module.exports = class PlayApi {
       timeout: 10000,
       headers: {
         'content-type': 'application/javascript; charset=UTF-8',
-        'x-gwt-module-base': 'https://ssl.gstatic.com/play-apps-publisher-rapid/fox/074adb9a16dafb48275500223c3f0df1/fox/gwt/',
-        'x-gwt-permutation': '46943F73EC56AB6C8219700574F79376',
+        'x-gwt-module-base': 'https://ssl.gstatic.com/play-apps-publisher-rapid/fox/ba980c6cd1496164cc9e7033f487d0d3/fox/gwt/',
+        'x-gwt-permutation': 'EDE92F625EE357A11EE70312B2D4C2B4',
         'cookie': this.cookies,
       },
     });

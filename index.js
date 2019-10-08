@@ -74,7 +74,7 @@ module.exports = class PlayApi {
       'wait-for input[name="password"]',
       'fill input[name="password"] {{password}}',
       'enter',
-      'wait 50s',
+      'wait 30s',
       'save-cookies {{{cookiePath}}}',
     ])
 

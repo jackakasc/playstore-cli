@@ -22,7 +22,7 @@ module.exports = async (self, app, metadata) => {
   await Pupt.checkRadio(page, 'input[name="countryheader"]', 1)
   
   // Set to NO on infant public
-  await Pupt.checkRadio(page, 'input[name="pcdRadioButton"]', 1)
+ // await Pupt.checkRadio(page, 'input[name="pcdRadioButton"]', 1)
   
   // Set to NO for ads
   await Pupt.checkRadio(page, 'input[name="ads_supported"]', 1)

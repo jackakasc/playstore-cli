@@ -70,7 +70,7 @@ module.exports = class PlayApi {
       'finish-if-url startsWith https://play.google.com/apps/publish/',
       'fill input[name="identifier"] {{email}}',
       'enter',
-      'wait 1s',
+      'wait 5s',
       'wait-for input[name="password"]',
       'fill input[name="password"] {{password}}',
       'enter',

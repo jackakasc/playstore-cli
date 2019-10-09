@@ -68,13 +68,14 @@ module.exports = class PlayApi {
       'load-cookies {{{cookiePath}}}',
       'goto https://play.google.com/apps/publish/',
       'finish-if-url startsWith https://play.google.com/apps/publish/',
+      'wait 2s',
       'fill input[name="identifier"] {{email}}',
       'enter',
       'wait 5s',
       'wait-for input[name="password"]',
       'fill input[name="password"] {{password}}',
       'enter',
-      'wait 30s',
+      'wait 10s',
       'save-cookies {{{cookiePath}}}',
     ])
 
@@ -213,23 +214,23 @@ module.exports = class PlayApi {
       await require('./actions/updateMarketListingPlace')(this, app, metadata)
 
       // --------------------- MarketListingPlace (Images)
-      console.log(tag, 'Updating app', chalk.green('images'))
+      console.log(tag, 'Updating marketListing images app', chalk.green('images'))
       await require('./actions/uploadMarketListingPlaceImages')(this, app, metadata)
 
       // --------------------- PricingPlace
-      console.log(tag, 'Updating app', chalk.green('pricing'))
+      console.log(tag, 'Updating price app', chalk.green('pricing'))
       await require('./actions/updatePricingPlace')(this, app, metadata)
 
       // --------------------- ManageReleasesPlace
-      console.log(tag, 'Updating app', chalk.green('APK'))
+      console.log(tag, 'Updating APK app', chalk.green('APK'))
       await require('./actions/uploadApk')(this, app, metadata)
 
       // --------------------- ManageReleasesPlace
-      console.log(tag, 'Updating app', chalk.green('Classification'))
+      console.log(tag, 'Updating Classification app', chalk.green('Classification'))
       await require('./actions/updateClassification')(this, app, metadata)
       
       // --------------------- ContentCenterPlace
-      console.log(tag, 'Updating app', chalk.green('Content'))
+      console.log(tag, 'Updating Content app', chalk.green('Content'))
       await require('./actions/updateContent')(this, app, metadata)
       
       // --------------------- PublishPlace

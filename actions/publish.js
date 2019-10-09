@@ -44,7 +44,7 @@ module.exports = async (self, app, metadata) => {
 
   console.log(tag, 'Publishing 2/3')
   
-  await sleep(120000)
+  //await sleep(120000)
   let launch = await Pupt.$waitByText(page, `Start rollout to ${lane}`)
 
   // Check it's not disabled
